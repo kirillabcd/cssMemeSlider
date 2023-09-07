@@ -7,7 +7,8 @@
     padding: 5rem 0 5rem 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hidden-radio {
@@ -33,7 +34,7 @@
 
 .meme-slide {
     width: 100vw;
-    height: 70vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
 }
@@ -89,4 +90,41 @@
 #fourth-button:checked ~ .control-buttons .vissible-button-wrapper .button-visible-fourth,
 #fifth-button:checked ~ .control-buttons .vissible-button-wrapper .button-visible-fifth {
     background-color: rgb(225, 146, 182);
+}
+
+.slider-description-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 300px;
+    height: 100%;
+}
+.description-items {
+    display: flex;
+    justify-content: space-between;
+    width: 400%;
+    translate: 0%;
+}
+.description-item {
+    display: inline-block;
+    width: 300px;
+    height: 100%;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+#second-button:checked ~ .slider-description-wrapper .description-items {
+    translate: -25%;
+}
+
+#third-button:checked ~ .slider-description-wrapper .description-items {
+    translate: -50%;
+}
+
+#fourth-button:checked ~ .slider-description-wrapper .description-items {
+    translate: -75%;
+}
+
+#first-button:checked ~ .slider-description-wrapper .description-items {
+    translate: 0;
 }
