@@ -1,0 +1,92 @@
+/* Normalize css */
+@import url(./normalize.css);
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem 0 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hidden-radio {
+    display: none;
+}
+
+.meme-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-start;
+}
+
+.meme-slider {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.meme-slide {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.meme-image {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.vissible-button-wrapper {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-visible {
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+    background-color: black;
+    transition: 0.5s ease;
+}
+
+#second-button:checked ~ .meme-wrapper .meme-slider {
+    translate: -25%;
+}
+
+#third-button:checked ~ .meme-wrapper .meme-slider {
+    translate: -50%;
+}
+
+#fourth-button:checked ~ .meme-wrapper .meme-slider {
+    translate: -75%;
+}
+
+#first-button:checked ~ .meme-wrapper .meme-slider {
+    translate: 0;
+}
+
+#first-button:checked ~ .control-buttons .vissible-button-wrapper .button-visible-first,
+#second-button:checked ~ .control-buttons .vissible-button-wrapper .button-visible-second,
+#third-button:checked ~ .control-buttons .vissible-button-wrapper .button-visible-third,
+#fourth-button:checked ~ .control-buttons .vissible-button-wrapper .button-visible-fourth,
+#fifth-button:checked ~ .control-buttons .vissible-button-wrapper .button-visible-fifth {
+    background-color: rgb(225, 146, 182);
+}
