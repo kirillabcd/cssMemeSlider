@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>CSS only meme slider</title>
+    </head>
+    <body>
+        <div class="container">
+            <input
+                type="radio"
+                name="slider-button-hidden"
+                id="first-button"
+                class="hidden-radio"
+                checked
+            />
+            <input
+                type="radio"
+                name="slider-button-hidden"
+                id="second-button"
+                class="hidden-radio"
+            />
+            <input
+                type="radio"
+                name="slider-button-hidden"
+                id="third-button"
+                class="hidden-radio"
+            />
+            <input
+                type="radio"
+                name="slider-button-hidden"
+                id="fourth-button"
+                class="hidden-radio"
+            />
+            <input
+                type="radio"
+                name="slider-button-hidden"
+                id="fifth-button"
+                class="hidden-radio"
+            />
+            <div class="meme-wrapper">
+                <div class="meme-slider">
+                    <div class="meme-slide meme-slide-first">
+                        <img src="./img/meme1.png" alt="" class="meme-image meme-image-first" />
+                    </div>
+                    <div class="meme-slide meme-slide-second">
+                        <img src="./img/meme2.png" alt="" class="meme-image meme-image-second" />
+                    </div>
+                    <div class="meme-slide meme-slide-third">
+                        <img src="./img/meme3.png" alt="" class="meme-image meme-image-third" />
+                    </div>
+                    <div class="meme-slide meme-slide-fourth">
+                        <img src="./img/meme4.png" alt="" class="meme-image meme-image-fourth" />
+                    </div>
+                    <!-- <div class="meme-slide meme-slide-fifth">
+                        <img src="" alt="" class="meme-image meme-image-fifth" />
+                    </div> -->
+                </div>
+            </div>
+            <div class="controls-box">
+                <div class="slider-description-wrapper">
+                    <div class="description-items">
+                        <div class="description-item first-item">First comic</div>
+                        <div class="description-item second-item">Second comic</div>
+                        <div class="description-item third-item">Third comic</div>
+                        <div class="description-item fourth-item">Fourth comic</div>
+                        <!-- <div class="description-item fifth-item">Fifth comic</div> -->
+                    </div>
+                </div>
+                <div class="control-buttons">
+                    <label for="first-button" class="vissible-button-wrapper">
+                        <div class="button-visible button-visible-first"></div>
+                    </label>
+                    <label for="second-button" class="vissible-button-wrapper">
+                        <div class="button-visible button-visible-second"></div>
+                    </label>
+                    <label for="third-button" class="vissible-button-wrapper">
+                        <div class="button-visible button-visible-third"></div>
+                    </label>
+                    <label for="fourth-button" class="vissible-button-wrapper">
+                        <div class="button-visible button-visible-fourth"></div>
+                    </label>
+                    <!-- <label for="fifth-button" class="vissible-button"><div class="slider-button-visible"></div></label> -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

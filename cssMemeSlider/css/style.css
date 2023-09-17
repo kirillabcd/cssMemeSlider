@@ -1,0 +1,191 @@
+/* Normalize css and fonts*/
+@import url(./normalize.css);
+@import url(./fonts.css);
+
+.container {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.hidden-radio {
+    display: none;
+}
+
+.meme-wrapper {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-start;
+}
+
+.meme-slider {
+    display: flex;
+    width: 400%;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.meme-slide {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.meme-image {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.controls-box {
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        gap: 1.25rem;
+    }
+}
+
+.control-buttons {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.vissible-button-wrapper {
+    height: 1.875rem;
+    width: 1.875rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-visible {
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+    background-color: black;
+    transition: 0.5s ease;
+
+    @media (min-width: 768px) {
+        &:hover {
+            scale: 1.3;
+        }
+    }
+}
+
+#second-button:checked ~ .meme-wrapper .meme-slider {
+    translate: -25%;
+}
+
+#third-button:checked ~ .meme-wrapper .meme-slider {
+    translate: -50%;
+}
+
+#fourth-button:checked ~ .meme-wrapper .meme-slider {
+    translate: -75%;
+}
+
+#first-button:checked ~ .meme-wrapper .meme-slider {
+    translate: 0;
+}
+
+#first-button:checked
+    ~ .controls-box
+    .control-buttons
+    .vissible-button-wrapper
+    .button-visible-first,
+#second-button:checked
+    ~ .controls-box
+    .control-buttons
+    .vissible-button-wrapper
+    .button-visible-second,
+#third-button:checked
+    ~ .controls-box
+    .control-buttons
+    .vissible-button-wrapper
+    .button-visible-third,
+#fourth-button:checked
+    ~ .controls-box
+    .control-buttons
+    .vissible-button-wrapper
+    .button-visible-fourth,
+#fifth-button:checked
+    ~ .controls-box
+    .control-buttons
+    .vissible-button-wrapper
+    .button-visible-fifth {
+    background-color: rgb(225, 146, 182);
+}
+
+.slider-description-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.description-items {
+    display: flex;
+    justify-content: space-between;
+    width: 400%;
+}
+.description-item {
+    display: block;
+    width: 100vw;
+    height: 100%;
+
+    font-family: 'Fafo';
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    opacity: 0;
+    transition: 2s ease;
+
+    @media (max-width: 768px) {
+        /* text-align: center; */
+        font-size: 2rem;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 1.5rem;
+    }
+}
+
+#second-button:checked ~ .controls-box .slider-description-wrapper .description-items {
+    translate: -25%;
+}
+#second-button:checked ~ .controls-box .slider-description-wrapper .description-items .second-item {
+    opacity: 1;
+}
+
+#third-button:checked ~ .controls-box .slider-description-wrapper .description-items {
+    translate: -50%;
+}
+
+#third-button:checked ~ .controls-box .slider-description-wrapper .description-items .third-item {
+    opacity: 1;
+}
+
+#fourth-button:checked ~ .controls-box .slider-description-wrapper .description-items {
+    translate: -75%;
+}
+#fourth-button:checked ~ .controls-box .slider-description-wrapper .description-items .fourth-item {
+    opacity: 1;
+}
+
+#first-button:checked ~ .controls-box .slider-description-wrapper .description-items {
+    translate: 0;
+}
+#first-button:checked ~ .controls-box .slider-description-wrapper .description-items .first-item {
+    opacity: 1;
+}
